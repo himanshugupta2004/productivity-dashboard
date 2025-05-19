@@ -1,0 +1,672 @@
+:root {
+    --pri: #F8F4E1;
+    --sec: #381c0a;
+    --tri1: #FEBA17;
+    --tri2: #74512D;
+    --red: red;
+    --green: rgb(9, 138, 89);
+    --blue: rgb(0, 191, 255);
+    --black: black;
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 200;
+    src: url(./AeonikTRIAL-Light.otf);
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 500;
+    src: url(./AeonikTRIAL-Regular.otf);
+}
+
+@font-face {
+    font-family: aeonik;
+    font-weight: 700;
+    src: url(./AeonikTRIAL-Bold.otf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: aeonik;
+    color: var(--pri);
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 120%;
+    width: 100%;
+    padding-top: 100px;
+    background-color: var(--sec);
+}
+
+
+section.allElems {
+    height: 100%;
+    width: 100%;
+    padding: 40px;
+
+    overflow: auto;
+    position: absolute;
+
+}
+
+.allElems header {
+    width: 100%;
+    background-image: url(https://images.unsplash.com/photo-1717361279773-b2e7ee713d2e?q=80&w=3869&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 40px;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 35px 50px;
+}
+
+header .header1 h1 {
+    font-size: 80px;
+    font-weight: 700;
+    margin-bottom: 60px;
+}
+
+header .header1 h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+header .header1 h4 {
+    font-weight: 500;
+    font-size: 40px;
+}
+
+header .header2 h2 {
+    font-weight: 700;
+    font-size: 70px;
+}
+
+header .header2 h4 {
+    font-weight: 500;
+    margin-top: -10px;
+    margin-bottom: 45px;
+    font-size: 40px;
+}
+
+header .header2 h3 {
+    font-weight: 500;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+
+
+.allElems .allFeatures {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.elem {
+    height: 400px;
+    width: 330px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+    cursor: pointer;
+    -webkit-box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.elem img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.elem h2 {
+    position: absolute;
+    bottom: 4%;
+    font-weight: 500;
+    font-size: 33px;
+    right: 5%;
+
+}
+
+.elem:active {
+    scale: 0.97;
+}
+
+.fullElem {
+    height: 100%;
+    width: 100%;
+    background-color: var(--sec);
+    padding: 40px;
+    display: none;
+    position: absolute;
+    top: 0;
+    z-index: 999;
+}
+
+.back {
+    position: absolute;
+    right: 5%;
+    background-color: var(--red);
+    border-radius: 10px;
+    padding: 15px 22px;
+    border: none;
+    font-size: 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.back:active {
+    scale: 0.97;
+}
+
+
+.todo-list-fullpage h2 {
+    font-size: 65px;
+}
+
+.todo-list-fullpage .todo-container {
+    height: 80%;
+    width: 100%;
+    margin-top: 40px;
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+}
+
+.todo-list-fullpage .todo-container .addTask {
+    width: 33%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+.todo-list-fullpage .todo-container .addTask form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.todo-container .addTask form #task-input {
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 29px;
+    border-radius: 5px;
+    background-color: var(--pri);
+    color: var(--sec);
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.todo-container .addTask form textarea {
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 29px;
+    background-color: var(--pri);
+    color: var(--sec);
+    border-radius: 5px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.todo-container .addTask form button {
+    padding: 15px 25px;
+    width: 100%;
+    font-size: 26px;
+    background-color: var(--tri1);
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    outline: none;
+    margin-bottom: 20px;
+    -webkit-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
+    transition: all ease 0.3s;
+}
+
+.todo-container .addTask form button:active {
+    scale: 0.96;
+}
+
+.todo-list-fullpage .todo-container .allTask {
+    width: 65%;
+    background-color: var(--tri2);
+    height: 100%;
+    border-radius: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 30px;
+    overflow: auto;
+}
+
+.task {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    background-color: var(--pri);
+    padding: 20px 30px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.task h5 {
+    color: var(--sec);
+    font-size: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.task h5 span {
+    background-color: var(--red);
+    color: var(--pri);
+    padding: 4px 8px;
+    border-radius: 50px;
+    font-size: 11px;
+}
+
+.task h5 span.true {
+    opacity: 1;
+}
+
+.task h5 span.false {
+    opacity: 0;
+}
+
+.task button {
+    padding: 15px 30px;
+    color: var(--pri);
+    background-color: var(--green);
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    font-weight: 600;
+}
+
+.task button:active {
+    scale: 0.96;
+}
+
+.mark-imp {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    gap: 30px;
+}
+
+.mark-imp input {
+    scale: 1.7;
+}
+
+.mark-imp label {
+    font-size: 21px;
+
+}
+
+
+
+.daily-planner-fullpage h2 {
+    font-size: 70px;
+}
+
+.daily-planner-fullpage .day-planner {
+    background-color: var(--tri2);
+    height: 85%;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    overflow: auto;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.daily-planner-fullpage .day-planner .day-planner-time {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    position: relative;
+    width: 49%;
+    margin-bottom: 15px;
+}
+
+.day-planner .day-planner-time p {
+    position: absolute;
+    top: 12%;
+    left: 2%;
+    color: var(--tri1);
+    font-size: 16px;
+}
+
+.day-planner .day-planner-time input {
+    padding: 20px 45px;
+    width: 100%;
+    background-color: var(--sec);
+    border-radius: 5px;
+    border: none;
+    font-size: 35px;
+    padding-top: 34px;
+    outline: none;
+}
+
+
+
+
+.motivation-fullPage-container {
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.motivational-fullpage .motivation-container {
+    height: 600px;
+    width: 80%;
+    border-radius: 50px;
+    position: relative;
+}
+
+.motivational-fullpage .motivation-container::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--tri1);
+    border-radius: 50px;
+    scale: 1.15;
+    -webkit-filter: blur(100px);
+    filter: blur(100px);
+    z-index: 8;
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper {
+    z-index: 10;
+    position: absolute;
+
+    width: 100%;
+    background-color: var(--tri1);
+    padding: 20px;
+    border-radius: 30px;
+    border: 6px solid var(--tri2);
+
+}
+
+.motivation-1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+}
+
+.motivation-1 h2 {
+
+    background-color: var(--tri2);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 500;
+    text-align: right;
+}
+
+.motivation-2 {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 30px;
+
+}
+
+.motivation-2 h1 {
+    font-size: 65px;
+    font-weight: 700;
+    color: var(--sec);
+
+}
+
+.motivation-3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.motivation-3 h2 {
+    background-color: var(--tri2);
+    padding: 30px;
+    border-radius: 20px;
+    font-size: 40px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 500;
+    text-align: right;
+}
+
+.motivational-fullpage .motivation-container .motivation-wrapper img {
+    position: absolute;
+    right: 5%;
+    opacity: 0.2;
+    top: 5%;
+    height: 120px;
+}
+
+
+.pomodoro-fullpage h2 {
+    font-size: 50px;
+}
+
+.pomodoro-fullpage .pomo-timer {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.pomo-timer h1 {
+    font-size: 170px;
+}
+
+.pomo-timer button {
+    background-color: var(--tri2);
+    padding: 15px 40px;
+    font-size: 32px;
+    margin: 10px;
+    border-radius: 5px;
+    border: none;
+    -webkit-box-shadow: 7px 7px 0px var(--black);
+    box-shadow: 7px 7px 0px var(--black);
+    -webkit-transition: all ease 0.1s;
+    -o-transition: all ease 0.1s;
+    transition: all ease 0.1s;
+    font-weight: 700;
+}
+
+.pomo-timer button:active {
+    -webkit-box-shadow: 0px 0px 0px var(--black);
+    box-shadow: 0px 0px 0px var(--black);
+
+}
+
+.pomodoro-fullpage .session {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    background-color: var(--green);
+    padding: 15px 30px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    height: 60px;
+    width: 100%;
+    margin-bottom: 35px;
+    padding: 30px 40px;
+}
+
+.nav-in {
+
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
+    display: flex;
+    background-color: var(--tri2);
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 20px 30px;
+    border-radius: 10px;
+
+}
+
+.nav-in h2 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.theme {
+
+    background-color: var(--pri);
+    padding: 12px 20px;
+    border-radius: 10px;
+    -webkit-transition: all ease 0.2s;
+    -o-transition: all ease 0.2s;
+    transition: all ease 0.2s;
+    cursor: pointer;
+
+}
+
+.theme h4 {
+    color: var(--sec);
+    font-weight: 700;
+    font-size: 20px;
+    pointer-events: none;
+}
+
+.theme:active {
+    scale: 0.96;
+}
